@@ -1,38 +1,39 @@
-import React, { useState } from "react";
-import Accordion from "./components/Accordion";
-import Search from "./components/Search";
-import Dropdown from "./components/Dropdown";
-import Translate from "./components/Translate";
-import Route from "./components/Route";
-import Header from "./components/Header";
+import React, { useState } from 'react';
+import Accordion from './components/Accordion';
+import Search from './components/Search';
+import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
+import Route from './components/Route';
+import Header from './components/Header';
+import SearchEvent from './components/SearchEvent';
 
 const items = [
   {
-    title: "What is React?",
-    content: "React is a front end javascript framework",
+    title: 'What is React?',
+    content: 'React is a front end javascript framework',
   },
   {
-    title: "Why use React?",
-    content: "React is a favorite JS library among engineers",
+    title: 'Why use React?',
+    content: 'React is a favorite JS library among engineers',
   },
   {
-    title: "How do you use React?",
-    content: "You use React by creating components",
+    title: 'How do you use React?',
+    content: 'You use React by creating components',
   },
 ];
 
 const options = [
   {
-    label: "The Color Red",
-    value: "red",
+    label: 'The Color Red',
+    value: 'red',
   },
   {
-    label: "The Color Green",
-    value: "green",
+    label: 'The Color Green',
+    value: 'green',
   },
   {
-    label: "A Shade of Blue",
-    value: "blue",
+    label: 'A Shade of Blue',
+    value: 'blue',
   },
 ];
 
@@ -42,22 +43,25 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Route path="/">
+      <Route path='/'>
         <Accordion items={items} />
       </Route>
-      <Route path="/list">
+      <Route path='/list'>
         <Search />
       </Route>
-      <Route path="/dropdown">
+      <Route path='/dropdown'>
         <Dropdown
-          label="Select a color"
+          label='Select a color'
           options={options}
           selected={selected}
           onSelectedChange={setSelected}
         />
       </Route>
-      <Route path="/translate">
+      <Route path='/translate'>
         <Translate />
+      </Route>
+      <Route path='/event'>
+        <SearchEvent />
       </Route>
     </div>
   );
