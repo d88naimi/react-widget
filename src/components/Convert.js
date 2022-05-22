@@ -37,9 +37,11 @@ const Convert = ({ language, text }) => {
 
   return (
     <div>
-      <h1 className="ui header">{translated}</h1>
+      <h1 className='ui header'>{translated}</h1>
     </div>
   );
 };
 
 export default Convert;
+
+// this app only works on localhost
