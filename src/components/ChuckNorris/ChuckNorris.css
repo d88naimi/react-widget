@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+.container > * {
+  flex: 1;
+  margin-left: 2%;
+  min-width: 0;
+}
+
+.container > *:first-child {
+  margin-left: 0;
+}
